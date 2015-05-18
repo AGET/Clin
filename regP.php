@@ -9,10 +9,10 @@ if($_POST['tel']!="" && $_POST['nombre']!="")
  {
 
  
- $conexion=mysql_connect("localhost","ideaschi_vero","arg030303") or
+ $conexion=mysql_connect("127.0.0.1","root","") or
   die("Problemas en la conexion");
 
-  mysql_select_db("ideaschi_tienda",$conexion) or
+  mysql_select_db("clinica",$conexion) or
   die("Problemas en la seleccion de la base de datos");
 
 
@@ -23,13 +23,13 @@ if($_POST['tel']!="" && $_POST['nombre']!="")
 mysql_close($conexion);
 
 
- header("location:ProyectoWeb/AvanceSistemas/index.html?Registro Exitoso");
+              header("location:/ProyectosPrueba/AvanceSistemas/index.html?Cita registrada con exito");
+
  }
  
 else
  {
-header("location:/AltaP.php?Error en los datos");
-
+header("location:/ProyectosPrueba/AvanceSistemas/AltaP.php?Error en los datos");
 }
 ?>
 </body>

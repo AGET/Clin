@@ -51,23 +51,23 @@
         <h1 ><CENTER>BIENVENIDOS A CLINICA DE ESPECIALIDADES CHILPANCINGO</CENTER></h1>
         <h3>NUESTRAS CITAS A LA FECHA</h3>
          <?php
-$conexion=mysql_connect("localhost","ideaschi_vero","arg030303") or
+$conexion=mysql_connect("127.0.0.1","root","") or
   die("Problemas en la conexion");
 
-mysql_select_db("ideaschi_tienda",$conexion) or
+mysql_select_db("clinica",$conexion) or
   die("Problemas en la selección de la base de datos");
 
-$registros=mysql_query("select  nombre, fecha_consulta, tel, n_medico, consultorio, diagnostico
+$registros=mysql_query("select  nombre_paciente, fecha_consulta, telefono, nombre_medico, consultorio, diagnostico
                         from consultas_medicas",$conexion) or
   die("Problemas en el select:".mysql_error());
 
 while ($reg=mysql_fetch_array($registros))
 {
   
-  echo "NOMBRE DEL PACIENTE: ".$reg['nombre']."<br>";
+  echo "NOMBRE DEL PACIENTE: ".$reg['nombre_paciente']."<br>";
   echo "FECHA DE CONSULTA: ".$reg["fecha_consulta"]."<br>";
-  echo "TELEFONO DE PACIENTE: ".$reg["tel"]."<br>";
-  echo "NOMBRE DEL MEDICO: ".$reg["n_medico"]."<br>";
+  echo "TELEFONO DE PACIENTE: ".$reg["telefono"]."<br>";
+  echo "NOMBRE DEL MEDICO: ".$reg["nombre_medico"]."<br>";
   echo "NO. DE COSULTORIO: ".$reg["consultorio"]."<br>";
   echo "DIAGNOSTICO PREVIO: ".$reg["diagnostico"]."<br>";
 

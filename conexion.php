@@ -7,10 +7,10 @@ class DB{
 	var $Usuario;
 	var $Clave;
 	function DB(){
-		$this->BaseDatos = "ideaschi_tienda";
-		$this->Servidor = "localhost";
-		$this->Usuario = "ideaschi_vero";
-		$this->Clave = "arg030303";
+		$this->BaseDatos = "clinica";
+		$this->Servidor = "127.0.0.1";
+		$this->Usuario = "root";
+		$this->Clave = "";
 	}
 
 	 function conectar() {
