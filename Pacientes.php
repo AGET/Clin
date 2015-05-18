@@ -110,7 +110,7 @@
           <div class="email"><a href="http://prodigy.msn.com/?ocid=iehp"></a></div>
           <div class="twitter"><a href="https://twitter.com/"></a></div>
           <div class="youtube"><a href="videos.php"></a></div>
-          <div class="facebook"><a href="https://www.facebook.com/veronica.garciavalle.3?ref=tn_tnmn"></a></div>
+          <div class="facebook"><a href="https://www.facebook.com"></a></div>
         </section>
       </footer>
     </section>
